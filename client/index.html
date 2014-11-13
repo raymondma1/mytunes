@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <body class="container">
     <!-- Scripts may be placed anywhere on a page. But FYI, they block rendering of elements
      below them until after the scripts load-->
     <script src="bower_components/jquery/jquery.min.js"></script>
@@ -19,11 +19,16 @@
     <script src="views/LibraryEntryView.js"></script>
     <script src="views/AppView.js"></script>
 
+    <script src="views/SongQueueView.js"></script>
+    <script src="views/SongQueueEntryView.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
     <script>
       $(function(){
         // set up model objects
         var library = new Songs(songData);
-        debugger;
         var app = new AppModel({library: library});
 
         // build a view for the top level of the whole app
@@ -31,6 +36,7 @@
 
         // put the view onto the screen
         $('body').append(appView.render());
+
       });
     </script>
   </body>
