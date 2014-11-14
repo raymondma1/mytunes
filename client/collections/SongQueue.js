@@ -29,5 +29,5 @@ var SongQueue = Songs.extend({
     if(this.length>=1){
       this.playFirst()
     }
-  },
+  }
 });

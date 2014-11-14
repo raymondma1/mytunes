@@ -11,13 +11,11 @@ var SongQueueView = Backbone.View.extend({
     this.collection.on('add remove',function(){
 
     this.render();
-    console.log("logging")
     },this);
 
     this.collection.on('ended',function(){
 
     this.render();
-    console.log("logging")
     },this);
   },
 

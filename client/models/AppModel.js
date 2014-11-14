@@ -15,6 +15,8 @@ var AppModel = Backbone.Model.extend({
 
     params.library.on('play', function(song){
       this.set('currentSong', song);
+      song.count++
+      // console.log(song.count)
     }, this);
 
     // params.library.on('dequeue', function(song){
